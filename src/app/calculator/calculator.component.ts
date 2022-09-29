@@ -26,16 +26,20 @@ export class CalculatorComponent implements OnInit {
     return this.inputTracker.join('');
   };
   isOperator = () => {
-    switch(this.inputTracker[this.inputTracker.length-1]){
-      case '+':
-      case '-':
-      case '*':
-      case '/':
-      case '%':
-        return true
-      default:
-        return false
-    }
+      const ops = ['+','-','*','/','%'];
+      let v = this.inputTracker[this.inputTracker.length - 1];
+      if(ops.includes(v)){
+        return true;
+      }
+      return false;
+      // case '+':
+      // case '-':
+      // case '*':
+      // case '/':
+      // case '%':
+      //   return true
+      // default:
+      //   return false
   };
   //Use click events to get input data
   setCurrentInput = (value: string) => {
