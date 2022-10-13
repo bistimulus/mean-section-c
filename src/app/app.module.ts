@@ -8,7 +8,12 @@ import { TodoAddComponent } from './todo/todo-add/todo-add.component';
 import { TodoListComponent } from './todo/todo-list/todo-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
-import { CalculatorComponent } from './calculator/calculator.component'
+import { CalculatorComponent } from './calculator/calculator.component';
+import { RandomComponent } from './random/random.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatSliderModule } from '@angular/material/slider';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,19 @@ import { CalculatorComponent } from './calculator/calculator.component'
     TodoComponent,
     TodoAddComponent,
     TodoListComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    RandomComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatBadgeModule,
+    MatToolbarModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
